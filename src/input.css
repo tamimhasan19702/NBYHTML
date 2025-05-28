@@ -1,0 +1,48 @@
+/** @format */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  button,
+  input,
+  textarea {
+    @apply outline-0;
+  }
+  #links .active {
+    @apply text-gray-200;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-slate-900;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 15px;
+    border: 1px solid rgb(75 85 99);
+  }
+  ::-webkit-scrollbar {
+    background-color: transparent;
+    width: 8px;
+  }
+}
+
+body {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.test {
+  background: red !important;
+}
+
+#mega-menu {
+  position: absolute;
+  top: calc(100% + 1rem); /* Position below the nav */
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+/* Hide mega menu by default */
+#mega-menu.hidden {
+  display: none;
+}

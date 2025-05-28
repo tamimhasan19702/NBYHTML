@@ -1,0 +1,315 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bare - TailwindCSS</title>
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="./public/img/favicon.ico"
+      type="image/x-icon" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet" />
+
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"></script>
+
+    <!-- Core theme TailwindCSS-->
+    <link rel="stylesheet" href="./public/css/output.css" />
+    <!-- Core theme CSS-->
+    <link rel="stylesheet" href="./public/css/styles.css" />
+  </head>
+
+  <body class="bg-black">
+    <nav class="flex flex-col w-full mx-auto py-4">
+      <div
+        class="bg-secondary-color bg-opacity-20 backdrop-blur-sm rounded-xl border border-secondary-color shadow-lg px-4 md:px-5 lg:px-4 z-20 w-[90%] mx-auto">
+        <div
+          class="flex flex-col sm:flex-row items-center justify-between gap-0 py-2">
+          <div class="flex items-center justify-between w-full sm:w-auto">
+            <a href="#!" class="py-1 flex items-center text-2xl">
+              <img
+                class="w-[60px] h-[60px]"
+                src="./public/img/nbyit-favicon.png"
+                alt="logo" />
+            </a>
+
+            <!-- Hamburger -->
+            <button
+              id="hamburger"
+              aria-label="menu"
+              class="sm:hidden cursor-pointer flex flex-col justify-center gap-y-1">
+              <div class="w-6 h-1 rounded-lg bg-white bar duration-300"></div>
+              <div class="w-4 h-1 rounded-lg bg-white bar duration-300"></div>
+              <div class="w-6 h-1 rounded-lg bg-white bar duration-300"></div>
+            </button>
+          </div>
+
+          <!-- desktop -->
+          <ul
+            class="hidden sm:flex flex-row items-center gap-x-7 tracking-wide text-gray-400 mt-4 sm:mt-0 text-xl">
+            <li class="w-full sm:w-auto">
+              <a
+                href="index.html"
+                class="relative group text-white font-medium pb-1"
+                id="home-link">
+                <span>Home</span>
+                <span
+                  class="absolute left-0 bottom-0 w-full h-[2px] bg-primary-color transform scale-x-100 origin-left"></span>
+              </a>
+            </li>
+            <li class="w-full sm:w-auto">
+              <a
+                href="page1.html"
+                class="relative group text-white font-medium pb-1">
+                <span>Link</span>
+                <span
+                  class="absolute left-0 bottom-0 w-full h-[2px] bg-primary-color transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"></span>
+              </a>
+            </li>
+            <li class="w-full sm:w-auto">
+              <a
+                href="page2.html"
+                class="relative group text-white font-medium pb-1">
+                <span>Link</span>
+                <span
+                  class="absolute left-0 bottom-0 w-full h-[2px] bg-primary-color transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"></span>
+              </a>
+            </li>
+          </ul>
+
+          <!-- mobile -->
+          <ul
+            id="mobile-menu"
+            class="sm:hidden hidden flex-col items-center gap-y-10 w-full mt-2 text-gray-400 px-3 py-2">
+            <li class="w-full text-white py-2 text-xl w-full">
+              <button id="mobile-home-btn" class="block w-full active text-left">Home</button>
+            
+            </li>
+
+            <div id="mobile-mega-menu" class="mt-2  hidden transition-all duration-300 ease-in-out">
+              <div class="flex flex-col md:flex-row gap-6 px-6 py-8 bg-neutral-900 mb-4 rounded-lg text-white">
+            <!-- Image Column (50%) -->
+            <div class="w-full md:w-1/4">
+              <img
+                src="https://picsum.photos/600/400"
+                alt="Promo Image"
+                class="rounded-lg w-full h-auto object-cover" />
+            </div>
+
+            <!-- Menu Column 1 (25%) -->
+            <div class="w-full md:w-1/4">
+              <h3 class="text-lg font-semibold text-green-300 mb-3">Product</h3>
+              <ul class="space-y-2">
+                <li><a href="#" class="hover:underline">Hosting</a></li>
+                <li><a href="#" class="hover:underline">Domains</a></li>
+                <li><a href="#" class="hover:underline">Email</a></li>
+                <li><a href="#" class="hover:underline">Security</a></li>
+              </ul>
+            </div>
+
+            <!-- Menu Column 2 (25%) -->
+            <div class="w-full md:w-1/4">
+              <h3 class="text-lg font-semibold text-green-300 mb-3">Company</h3>
+              <ul class="space-y-2">
+                <li><a href="#" class="hover:underline">About Us</a></li>
+                <li><a href="#" class="hover:underline">Careers</a></li>
+                <li><a href="#" class="hover:underline">Blog</a></li>
+                <li><a href="#" class="hover:underline">Press</a></li>
+              </ul>
+            </div>
+          </div>
+            </div>
+            
+
+            <li class="w-full text-white py-2 text-xl">
+              <a
+                href="./public/pages/page1.html"
+                class="block w-full hover:text-gray-300"
+                >Link</a
+              >
+            </li>
+            <li class="w-full text-white py-2 text-xl">
+              <a
+                href="./public/pages/page2.html"
+                class="block w-full hover:text-gray-300"
+                >Link</a
+              >
+            </li>
+            <li class="w-full py-2 text-xl w-full mt-4">
+              <a
+                href="./public/pages/page2.html"
+                class="btn bg-primary-color text-white px-12 py-3 rounded-lg shadow-lg hover:bg-white hover:scale-105 transition hover:text-black w-full text-center w-full max-w-full">
+                Contact Now
+              </a>
+            </li>
+          </ul>
+
+          <!-- Button -->
+          <div class="flex gap-2 items-start w-full md:w-auto">
+            <button
+              class="btn hidden md:block bg-primary-color text-white px-6 py-2 rounded-lg shadow-lg hover:bg-white hover:scale-105 transition hover:text-black">
+              Contact Now
+            </button>
+          </div>
+        </div>
+
+     
+        
+          <!-- Mega Menu -->
+<div id="mega-menu" class="hidden md:block">
+  <div class="flex flex-col md:flex-row gap-6 px-6 py-8 bg-neutral-900 mb-4 rounded-lg text-white">
+    <!-- Image Column (50%) -->
+    <div class="w-full md:w-1/4">
+      <img
+        src="https://picsum.photos/600/400 "
+        alt="Promo Image"
+        class="rounded-lg w-full h-auto object-cover" />
+    </div>
+
+    <!-- Menu Column 1 (25%) -->
+    <div class="w-full md:w-1/4">
+      <h3 class="text-lg font-semibold text-green-300 mb-3">Product</h3>
+      <ul class="space-y-2">
+        <li><a href="#" class="hover:underline">Hosting</a></li>
+        <li><a href="#" class="hover:underline">Domains</a></li>
+        <li><a href="#" class="hover:underline">Email</a></li>
+        <li><a href="#" class="hover:underline">Security</a></li>
+      </ul>
+    </div>
+
+    <!-- Menu Column 2 (25%) -->
+    <div class="w-full md:w-1/4">
+      <h3 class="text-lg font-semibold text-green-300 mb-3">Company</h3>
+      <ul class="space-y-2">
+        <li><a href="#" class="hover:underline">About Us</a></li>
+        <li><a href="#" class="hover:underline">Careers</a></li>
+        <li><a href="#" class="hover:underline">Blog</a></li>
+        <li><a href="#" class="hover:underline">Press</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+        </div>
+      </div>
+    </nav>
+
+    <!-- megamenu -->
+
+    <main>
+      <!-- Page Content -->
+      <section class="text-center py-32">
+        <h1 class="font-bold text-3xl md:text-4xl lg:text-5xl pb-7">
+          A TailwindCSS Starter Template
+        </h1>
+        <p class="text-gray-600 mb-3">
+          A complete project boilerplate built with Tailwindcss
+        </p>
+        <p class="text-gray-600">Tailwind v3.0</p>
+      </section>
+
+      <!-- Footer -->
+      <footer class="bg-slate-900 pb-3 pt-10 lg:pt-20 text-white">
+        <div class="flex flex-wrap justify-around gap-y-16 gap-x-7 mb-16">
+          <!-- About -->
+          <div class="text-center mx-2 mb-5">
+            <h2 class="font-bold text-2xl mb-3 tracking-wider">
+              Template<span class="text-primary-color">Raven</span>
+            </h2>
+            <p class="pt-1">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,
+              minima?
+            </p>
+
+            <!-- Get Icons From Wherever and use it here -->
+            <div class="flex flex-wrap gap-x-7 justify-center gap-y-5 mt-5">
+              <a href="#!" class="text-primary-color hover:opacity-90">
+                icon
+              </a>
+              <a href="#!" class="text-primary-color hover:opacity-90">
+                icon
+              </a>
+              <a href="#!" class="text-primary-color hover:opacity-90">
+                icon
+              </a>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-y-8 sm:grid grid-cols-2">
+            <!-- Heading -->
+            <div class="mx-10 lg:mx-16">
+              <h2 class="font-bold text-xl mb-4">Heading</h2>
+              <ul
+                class="flex flex-col items-start gap-y-2 text-left font-semibold text-gray-400">
+                <li><a href="#!" class="hover:text-primary-color">link</a></li>
+                <li><a href="#!" class="hover:text-primary-color">link</a></li>
+                <li><a href="#!" class="hover:text-primary-color">link</a></li>
+                <li><a href="#!" class="hover:text-primary-color">link</a></li>
+              </ul>
+            </div>
+
+            <!-- Heading 2 -->
+            <div class="mx-10 lg:mx-16">
+              <h2 class="font-bold text-xl mb-4">Heading 2</h2>
+              <ul
+                class="flex flex-col items-start gap-y-2 text-left font-semibold text-gray-400">
+                <li><a href="#!" class="hover:text-primary-color">link</a></li>
+                <li><a href="#!" class="hover:text-primary-color">link</a></li>
+                <li><a href="#!" class="hover:text-primary-color">link</a></li>
+                <li><a href="#!" class="hover:text-primary-color">link</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Resources (Delete This if your website does not support newsletter) -->
+          <div class="mx-10 lg:mx-16">
+            <h2 class="font-bold text-xl mb-4">Resources</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur.
+            </p>
+
+            <form action="" class="mt-5 flex">
+              <input
+                type="email"
+                name="email"
+                class="bg-slate-800 outline-0 py-2 px-3 rounded-tl rounded-bl w-full caret-primary-color"
+                placeholder="Enter email here..." />
+              <button
+                type="submit"
+                class="bg-primary-color px-2 font-semibold text-slate-900 rounded-tr rounded-br hover:opacity-90">
+                Subscribe
+              </button>
+            </form>
+          </div>
+          <!-- Resources ends here -->
+        </div>
+
+        <!-- Sub Footer -->
+        <div
+          class="h-1 w-full bg-gradient-to-r from-primary-color to-green-500"></div>
+        <!-- Copyright -->
+        <p class="text-center mt-8 mb-4 font-semibold">
+          Template Raven - Copyright &copy; <span id="year"></span>. All Rights
+          Reserved
+        </p>
+      </footer>
+    </main>
+
+    <!-- Core Navbar JS-->
+    <script src="./public/js/navbar.js"></script>
+    <!-- Core theme JS-->
+    <script src="./public/js/scripts.js"></script>
+  </body>
+</html>
