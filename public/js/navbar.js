@@ -84,3 +84,26 @@ mainContent.addEventListener("click", () => {
     }
   }
 });
+
+// Get references
+const homeLink = document.getElementById("home-link");
+const megaMenu = document.getElementById("mega-menu");
+
+// Show mega menu on hover
+homeLink.addEventListener("mouseenter", () => {
+  megaMenu.classList.remove("hidden");
+});
+
+// Hide mega menu on mouseleave
+let timeoutId;
+homeLink.addEventListener("mouseleave", () => {
+  timeoutId = setTimeout(() => {
+    if (!megaMenu.contains(document.activeElement)) {
+      megaMenu.classList.add("hidden");
+    }
+  }, 2000);
+});
+
+homeLink.addEventListener("mouseenter", () => {
+  clearTimeout(timeoutId);
+});
