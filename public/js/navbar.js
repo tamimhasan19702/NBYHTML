@@ -85,25 +85,32 @@ mainContent.addEventListener("click", () => {
   }
 });
 
-// Get references
+// JavaScript
 const homeLink = document.getElementById("home-link");
 const megaMenu = document.getElementById("mega-menu");
 
-// Show mega menu on hover
+let timeoutId;
+
+// Show mega menu when mouse enters home link
 homeLink.addEventListener("mouseenter", () => {
+  clearTimeout(timeoutId);
   megaMenu.classList.remove("hidden");
 });
 
-// Hide mega menu on mouseleave
-let timeoutId;
-homeLink.addEventListener("mouseleave", () => {
-  timeoutId = setTimeout(() => {
-    if (!megaMenu.contains(document.activeElement)) {
-      megaMenu.classList.add("hidden");
-    }
-  }, 2000);
+// Keep showing the menu when hovering over it
+megaMenu.addEventListener("mouseenter", () => {
+  clearTimeout(timeoutId);
 });
 
-homeLink.addEventListener("mouseenter", () => {
-  clearTimeout(timeoutId);
+// Hide when leaving the mega menu
+megaMenu.addEventListener("mouseleave", () => {
+  timeoutId = setTimeout(() => {
+    megaMenu.classList.add("hidden");
+  }, 200);
+});
+
+homeLink.addEventListener("mouseleave", () => {
+  timeoutId = setTimeout(() => {
+    megaMenu.classList.add("hidden");
+  }, 200);
 });
