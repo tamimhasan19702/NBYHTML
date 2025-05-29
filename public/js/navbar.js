@@ -114,3 +114,24 @@ homeLink.addEventListener("mouseleave", () => {
     megaMenu.classList.add("hidden");
   }, 200);
 });
+
+const threshold = 10;
+let lastScrollY = window.scrollY;
+
+window.addEventListener("scroll", () => {
+  const navbar = document.getElementById("nby-nav");
+
+  if (!navbar) return;
+
+  const currentScrollY = window.scrollY;
+
+  if (currentScrollY - lastScrollY > threshold) {
+    // Scrolling down
+    navbar.style.transform = "translateY(-100%)";
+  } else if (lastScrollY - currentScrollY > threshold) {
+    // Scrolling up
+    navbar.style.transform = "translateY(0)";
+  }
+
+  lastScrollY = currentScrollY;
+});
