@@ -28,6 +28,10 @@
     <link rel="stylesheet" href="./public/css/output.css" />
     <!-- Core theme CSS-->
     <link rel="stylesheet" href="./public/css/styles.css" />
+
+
+ 
+
   </head>
 
   <body class="overflow-x-hidden" style=" background-color: #000;
@@ -39,10 +43,10 @@
     <!-- Navbar -->
     <nav 
     id="nby-nav"
-  class="fixed top-0 left-0 w-full flex justify-center z-50 py-4  transition-transform duration-300 ease-in-out"
+  class="fixed top-0 left-0  w-full flex justify-center z-50 py-4  transition-transform duration-300 ease-in-out"
     >
       <div
-        class="bg-white  backdrop-blur-sm rounded-xl d shadow-lg px-4 md:px-5 lg:px-4 z-20 w-[90%] md:w-[70%] mx-auto text-neutral-900">
+        class="bg-white bg-opacity-10  backdrop-blur-sm rounded-xl d shadow-lg px-4 md:px-5 lg:px-4 z-20 w-[90%] md:w-[70%] mx-auto text-white">
         <div
           class="flex flex-col sm:flex-row items-center justify-between gap-0 py-2">
           <div class="flex items-center justify-between w-full sm:w-auto">
@@ -58,15 +62,15 @@
               id="hamburger"
               aria-label="menu"
               class="sm:hidden cursor-pointer flex flex-col justify-center gap-y-1">
-              <div class="w-6 h-1 rounded-lg bg-neutral-900 bar duration-300"></div>
-              <div class="w-4 h-1 rounded-lg bg-neutral-900 bar duration-300"></div>
-              <div class="w-6 h-1 rounded-lg bg-neutral-900 bar duration-300"></div>
+              <div class="w-6 h-1 rounded-lg bg-white bar duration-300"></div>
+              <div class="w-4 h-1 rounded-lg bg-white bar duration-300"></div>
+              <div class="w-6 h-1 rounded-lg bg-white bar duration-300"></div>
             </button>
           </div>
 
           <!-- desktop -->
           <ul
-            class="hidden sm:flex flex-row items-center gap-x-7 tracking-wide text-neutral-900 mt-4 sm:mt-0 text-xl">
+            class="hidden sm:flex flex-row items-center gap-x-7 tracking-wide text-white mt-4 sm:mt-0 text-xl">
             <li class="w-full sm:w-auto">
               <a
                 href="index.html"
@@ -100,14 +104,14 @@
           <!-- mobile -->
           <ul
             id="mobile-menu"
-            class="sm:hidden hidden flex-col items-center gap-y-10 w-full mt-2 text-neutral-900 px-3 py-2">
+            class="sm:hidden hidden flex-col items-center gap-y-10 w-full mt-2 text-white px-3 py-2">
             <li class="w-full  py-2 text-xl ">
               <button id="mobile-home-btn" class="block w-full active text-left">Home</button>
             
             </li>
 
             <div id="mobile-mega-menu" class="mt-2  hidden transition-all duration-300 ease-in-out">
-               <div class="flex flex-col md:flex-row gap-6 px-6 py-8 bg-white  bg-opacity-80 backdrop-blur-sm mb-4 rounded-lg text-neutral-900">
+               <div class="flex flex-col md:flex-row gap-6 px-6 py-8 bg-black bg-opacity-80   backdrop-blur-sm mb-4 rounded-lg text-white">
     <!-- Image Column (50%) -->
     <div class="w-full md:w-1/2">
       <h3 class="text-lg font-semibold text-primary-color mb-3"> Explore Demos</h3>
@@ -186,7 +190,7 @@
             <li class="w-full py-2 text-xl  mt-4">
               <a
                 href="./public/pages/page2.html"
-                class="btn bg-primary-color text-white  px-12 py-3 rounded-lg shadow-lg hover:bg-white hover:scale-105 transition hover:text-black w-full text-center  max-w-full">
+                class="btn bg-black text-white  px-12 py-3 rounded-lg shadow-lg hover:bg-white hover:scale-105 transition hover:text-black w-full text-center  max-w-full">
                 Contact Now
               </a>
             </li>
@@ -195,7 +199,7 @@
           <!-- Button -->
           <div class="flex gap-2 items-start w-full md:w-auto">
             <button
-              class="btn hidden md:block bg-primary-color text-white px-6 py-2 rounded-lg shadow-lg hover:bg-white hover:scale-105 transition hover:text-black">
+              class="btn hidden md:block bg-black text-white px-6 py-2 rounded-lg shadow-lg hover:bg-white hover:scale-105 transition hover:text-black">
               Contact Now
             </button>
           </div>
@@ -205,7 +209,7 @@
         
           <!-- Mega Menu -->
 <div id="mega-menu" class="hidden md:block transition-all duration-300 ease-in-out">
-  <div class="flex flex-col md:flex-row gap-6 px-6 py-8 bg-white backdrop-blur-sm mb-4 rounded-lg text-white-900">
+  <div class="flex flex-col md:flex-row gap-6 px-6 py-8 bg-black bg-opacity-80 backdrop-blur-lg mb-4 rounded-lg text-white-900">
     <!-- Image Column (50%) -->
     <div class="w-full md:w-1/2">
       <h3 class="text-lg font-semibold text-primary-color mb-3"> Explore Demos</h3>
@@ -279,9 +283,10 @@
     <!-- Hero Video -->
     <div id="hero-video" class="hero-vid absolute inset-0 z-0">
       <video autoplay loop muted playsinline class="w-full h-[90vh] md:h-full object-cover rounded-b-[50px] md:rounded-b-[100px]">
-        <source src="./public/img/Sofa.mp4" type="video/mp4">
+        <source src="./public/img/Sunset.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-50"></div>
     </div>
 
     <!-- Content Overlay -->
@@ -299,13 +304,13 @@
           Enhance your business to the next level
         </p>
     
-        <div class="flex flex-row gap-5">
+        <div class="flex flex-row gap-5 mt-4">
          <button
               class="btn  text-black px-6 py-2 rounded-lg shadow-lg bg-white hover:scale-105 transition m">
               Contact Now
             </button>
           <button
-              class="btn  text-white px-6 py-2 rounded-lg shadow-lg bg-black hover:scale-105 transition ">
+              class="btn  text-white px-6 py-2 rounded-lg shadow-lg bg-primary-color hover:scale-105 transition ">
               View Portfolio
             </button>
         </div>
@@ -314,7 +319,7 @@
     </div>
   </section>
 
-  <!-- Other Sections -->
+  
   <section>
     <div class="mt-0 md:mt-20 flex flex-col items-start justify-start gap-0 md:gap-10">
       <div class="mb-10 px-10 flex flex-col items-start justify-start gap-1 md:gap-5">  
@@ -376,6 +381,140 @@
 
     </div>
   </section>
+
+  <section>
+    <div class="mt-0 md:mt-10 flex flex-col items-start justify-start gap-0 md:gap-10 ">
+      <div class="mb-10 px-10 flex flex-col items-start justify-start gap-1 md:gap-5 " >  
+        <p class="text-white text-lg md:text-2xl lg:text-[1.5rem] xl:text-[1.5rem]">Explore our Works</p>
+   <h2 class="font-bold text-white text-5xl md:text-4xl lg:text-[3rem] xl:text-[5rem]">Portfolio</h2>
+  
+<div class='gallery-track'>
+    <div class='card'>
+      <div class='card-image-wrapper'>
+        <img src='https://images.unsplash.com/photo-1607419726991-5fc7e74cda67?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+      </div>
+    </div>
+    <div class='card'>
+      <div class='card-image-wrapper'>
+        <img src='https://images.unsplash.com/photo-1601042879364-f3947d3f9c16?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+      </div>
+    </div>
+    <div class='card'>
+      <div class='card-image-wrapper'>
+        <img src='https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?q=80&w=2272&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+      </div>
+    </div>
+    <div class='card'>
+      <div class='card-image-wrapper'>
+        <img src='https://images.unsplash.com/photo-1514439827219-9137a0b99245?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+      </div>
+    </div>
+    <div class='card'>
+      <div class='card-image-wrapper'>
+        <img src='https://images.unsplash.com/photo-1525790935716-36a6c45ad067?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+      </div>
+    </div>
+    <div class='card'>
+      <div class='card-image-wrapper'>
+        <img src='https://images.unsplash.com/photo-1561344640-2453889cde5b?q=80&w=2467&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+      </div>
+    </div>
+    <div class='card'>
+      <div class='card-image-wrapper'>
+        <img src='https://images.unsplash.com/photo-1561602009-0ecd1cada8bd?q=80&w=2456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+      </div>
+    </div>
+    <div class='card'>
+      <div class='card-image-wrapper'>
+        <img src='https://images.unsplash.com/photo-1560583306-bd304a162229?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+      </div>
+    </div>
+    <div class='card'>
+      <div class='card-image-wrapper'>
+        <img src='https://images.unsplash.com/photo-1535478044878-3ed83d5456ef?q=80&w=2382&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+      </div>
+    </div>
+    <div class='card'>
+      <div class='card-image-wrapper'>
+        <img src='https://images.unsplash.com/photo-1610322231968-31322d42851f?q=80&w=2536&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+      </div>
+    </div>
+    <div class='card'>
+      <div class='card-image-wrapper'>
+        <img src='https://images.unsplash.com/photo-1561344640-2453889cde5b?q=80&w=2467&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+      </div>
+    </div>
+    <div class='card'>
+      <div class='card-image-wrapper'>
+        <img src='https://images.unsplash.com/photo-1536890992765-f42a1ee1e2a8?q=80&w=2121&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+      </div>
+    </div>
+    <div class='card'>
+      <div class='card-image-wrapper'>
+        <img src='https://images.unsplash.com/photo-1560583306-bd304a162229?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+      </div>
+    </div>
+    <div class='card'>
+      <div class='card-image-wrapper'>
+        <img src='https://images.unsplash.com/photo-1573455494060-c5595004fb6c?q=80&w=2280&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+      </div>
+    </div>
+    <div class='card'>
+      <div class='card-image-wrapper'>
+        <img src='https://images.unsplash.com/photo-1627740660376-bc7506720b8a?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+      </div>
+    </div>
+    <div class='card'>
+      <div class='card-image-wrapper'>
+        <img src='https://images.unsplash.com/photo-1563964040780-8605906e3eb6?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+      </div>
+    </div>
+    <div class='card'>
+      <div class='card-image-wrapper'>
+        <img src='https://images.unsplash.com/photo-1592507645647-f2f1d8103c86?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+      </div>
+    </div>
+    <div class='card'>
+      <div class='card-image-wrapper'>
+        <img src='https://images.unsplash.com/photo-1504805572947-34fad45aed93?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+      </div>
+    </div>
+    <div class='card'>
+      <div class='card-image-wrapper'>
+        <img src='https://images.unsplash.com/photo-1541591681685-0246308f076b?q=80&w=2489&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+      </div>
+    </div>
+    <div class='card'>
+      <div class='card-image-wrapper'>
+        <img src='https://images.unsplash.com/photo-1539027994943-7d6960acfaad?q=80&w=2535&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+      </div>
+    </div>
+    <div class='card'>
+      <div class='card-image-wrapper'>
+        <img src='https://images.unsplash.com/photo-1573501815578-6252ee088c47?q=80&w=2283&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+      </div>
+    </div>
+    <div class='card'>
+      <div class='card-image-wrapper'>
+        <img src='https://images.unsplash.com/photo-1558273246-57d22047406d?q=80&w=2535&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+      </div>
+    </div>
+    <div class='card'>
+      <div class='card-image-wrapper'>
+        <img src='https://images.unsplash.com/photo-1534685042784-4c7c97ae40d7?q=80&w=2427&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+      </div>
+    </div>
+    <div class='card'>
+      <div class='card-image-wrapper'>
+        <img src='https://images.unsplash.com/photo-1627740660376-bc7506720b8a?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'>
+      </div>
+    </div>
+  </div>
+  
+  </div>
+    </div>
+</section>
+
 
   <!-- Footer -->
 </main>
