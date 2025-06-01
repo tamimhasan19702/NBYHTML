@@ -136,4 +136,10 @@ body {
   }
 }
 
-/* container css */
+.slider-container {
+  height: 600px;
+}
+
+.slide {
+  object-fit: cover;
+}
