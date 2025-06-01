@@ -282,7 +282,7 @@
   <section id="hero-section" class="flex flex-col items-start justify-end h-screen w-full py-32 gap-0 md:gap-10 relative px-10 md:px-80 lg:px-70">
     <!-- Hero Video -->
     <div id="hero-video" class="hero-vid absolute inset-0 z-0">
-      <video autoplay loop muted playsinline class="w-full h-[90vh] md:h-full object-cover rounded-b-[50px] md:rounded-b-[100px]">
+      <video autoplay loop muted playsinline class="w-full h-[70vh] md:h-full object-cover rounded-b-[50px] md:rounded-b-[100px]">
         <source src="./public/img/Sunset.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
@@ -319,7 +319,7 @@
     </div>
   </section>
 
-  
+  <!-- Services -->
   <section>
     <div class="mt-0 md:mt-20 flex flex-col items-start justify-start gap-0 md:gap-10">
       <div class="mb-10 px-10 flex flex-col items-start justify-start gap-1 md:gap-5">  
@@ -382,6 +382,7 @@
     </div>
   </section>
 
+  <!-- Portfolio -->
   <section>
     <div class="mt-0 md:mt-10 flex flex-col items-start justify-start gap-0 md:gap-10 ">
       <div class="mb-10 px-10 flex flex-col items-start justify-start gap-1 md:gap-5 " >  
@@ -515,6 +516,63 @@
     </div>
 </section>
 
+  <section>
+    <div class="mt-0 md:mt-10 flex flex-col items-start justify-start gap-0 md:gap-10 ">
+      <div class="mb-10 px-10 flex flex-col items-start justify-start gap-1 md:gap-5 " >  
+        <p class="text-white text-lg md:text-2xl lg:text-[1.5rem] xl:text-[1.5rem]">How We Work</p>
+   <h2 class="font-bold text-white text-5xl md:text-4xl lg:text-[3rem] xl:text-[5rem]"> Work Process</h2>
+  
+
+<div class="flex flex-col md:flex-row gap-10 items-center">
+      <!-- Left Side - Steps -->
+      <div class="text-white w-full">
+       
+        <div class="grid grid-cols-1 gap-5">
+          <div>
+            <h3 class="font-semibold text-lg">Step 1: Brief & Consultation</h3>
+            <p class="text-gray-300">Understand your vision, product, or concept.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-lg">Step 2: 3D Modeling</h3>
+            <p class="text-gray-300">Create high-quality 3D models based on your inputs.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-lg">Step 3: Rendering</h3>
+            <p class="text-gray-300">Generate photorealistic visuals for review.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-lg">Step 4: Feedback & Revisions</h3>
+            <p class="text-gray-300">Refine until it meets your expectations.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-lg">Step 5: Delivery</h3>
+            <p class="text-gray-300">Deliver final files in preferred format (GLB, FBX, OBJ, etc.).</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Side - Image -->
+      <div class="w-full ">
+        <img
+          src="https://picsum.photos/800/600" 
+          alt="3D Work Process"
+          class="rounded-lg w-full h-auto object-cover shadow-lg "
+        />
+      </div>
+    </div>
+
+
+ 
+</div>
+   
+
+
+
+  </div>
+    </div>
+</section>
+
+
 
   <!-- Footer -->
 </main>
@@ -531,7 +589,8 @@
     <!-- Core theme JS-->
     <script src="./public/js/scripts.js"></script>
 
- 
+    <!-- ModelViewer JS -->
+   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 
 
   </body>
