@@ -143,3 +143,12 @@ body {
 .slide {
   object-fit: cover;
 }
+
+/* testimonials */
+
+@media (min-width: 768px) {
+  .w-full.max-w-full.grid.grid-cols-2.grid-rows-auto.md\:grid-cols-5.md\:gap-4.md\:p-8 {
+    grid-template-columns: repeat(5, minmax(0, 1fr)); /* 5 equal columns */
+    grid-template-rows: repeat(5, minmax(0, 1fr)); /* 5 equal rows */
+  }
+}
