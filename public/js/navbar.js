@@ -118,20 +118,18 @@ homeLink.addEventListener("mouseleave", () => {
 const threshold = 10;
 let lastScrollY = window.scrollY;
 
-window.addEventListener("scroll", () => {
-  const navbar = document.getElementById("nby-nav");
+const showAnim = gsap
+  .from("#nby-nav", {
+    yPercent: -100,
+    paused: true,
+    duration: 0.2,
+  })
+  .progress(1);
 
-  if (!navbar) return;
-
-  const currentScrollY = window.scrollY;
-
-  if (currentScrollY - lastScrollY > threshold) {
-    // Scrolling down
-    navbar.style.transform = "translateY(-100%)";
-  } else if (lastScrollY - currentScrollY > threshold) {
-    // Scrolling up
-    navbar.style.transform = "translateY(0)";
-  }
-
-  lastScrollY = currentScrollY;
+ScrollTrigger.create({
+  start: "top top",
+  end: "max",
+  onUpdate: (self) => {
+    self.direction === -1 ? showAnim.play() : showAnim.reverse();
+  },
 });

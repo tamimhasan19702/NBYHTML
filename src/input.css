@@ -152,3 +152,17 @@ body {
     grid-template-rows: repeat(5, minmax(0, 1fr)); /* 5 equal rows */
   }
 }
+
+.pattern-container {
+  width: 100%;
+  height: 100%;
+
+  background-image: repeating-radial-gradient(
+    #0c0a0a 80%,
+    #1d1d1d 90%,
+    #000000 90%
+  );
+  background-size: 65px 65px;
+}
+
+/* clients */
