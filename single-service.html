@@ -463,24 +463,55 @@
     </div>
   </div>
 
+
+  <!-- content 1-->
   
-  <div class="text-white w-full ">
+  <div class="text-white w-full mt-4 md:mt-10">
     
-   <!-- Slider Section -->
-<div class="w-full ">
+  <div class="flex flex-col-reverse md:flex-row  items-start justify-center w-full gap-6">
+    
+
+    <div class="w-full flex flex-col gap-10 ">
+<div class="flex flex-col gap-5 md:gap-10">
+  <h2 class="font-bold text-white text-5xl md:text-4xl lg:text-[3rem] xl:text-[5rem]">What is 3D Product Modeling?</h2>
+  <p class="text-white text-lg md:text-2xl lg:text-[1.5rem] xl:text-[1.5rem]">This means creating three-dimensional representations of a physical product using computer software. It allows the creation of photorealistic images and improved product visualization. These images are used in marketing, product demos, advertisements, etc. Buyers can easily understand product features and benefits. It makes them easier to make decisions whether they buy it or not. It also reduced production time with fewer errors and increased productivity. Anyone can change the design of product modeling any time before production without major cost. 3D product modeling has many advantages.</p>
+        </div>
+
+        <div class="flex flex-col gap-5 ">
+ <h2 class="font-bold text-white text-3xl md:text-6xl">Uses of 3D Product Modeling</h2>
+  <p class="text-white text-sm md:text-lg ">It is used in various kinds of industries. The purpose of using 3D modeling in product manufacturing is efficiency, accuracy, visualization, time-saving, reducing cost, etc. Almost every industry is currently using it. This services is extensively used in E-Commerce businesses. You can visualize your product from different angles and with more details of the product. The gaming industry heavily relies on it for making characters and environments. Besides, marketing, architecture, and many other injuries where it is currently being used.</p>
+        </div>
+ 
+        <div class="flex flex-col gap-5 ">
+ <h2 class="font-bold text-white text-3xl md:text-6xl">Uses of 3D Product Modeling</h2>
+  <p class="text-white text-sm md:text-lg ">It is used in various kinds of industries. The purpose of using 3D modeling in product manufacturing is efficiency, accuracy, visualization, time-saving, reducing cost, etc. Almost every industry is currently using it. This services is extensively used in E-Commerce businesses. You can visualize your product from different angles and with more details of the product. The gaming industry heavily relies on it for making characters and environments. Besides, marketing, architecture, and many other injuries where it is currently being used.</p>
+        </div>
+
+</div>
+
+
+<div class="w-full md:w-1/3 ">
   <div class="slider-container relative overflow-hidden w-full h-full max-w-full mx-auto rounded-lg cursor-pointer">
   <div class="slides absolute top-0 left-0 w-full h-full">
-    <img src="https://picsum.photos/id/1011/1400/900" class="slide w-full h-full absolute opacity-0 object-cover" />
-    <img src="https://picsum.photos/id/1015/1400/900" class="slide w-full h-full absolute opacity-0 object-cover" />
-    <img src="https://picsum.photos/id/1016/1400/900" class="slide w-full h-full absolute opacity-0 object-cover" />
-    <img src="https://picsum.photos/id/1019/1400/900" class="slide w-full h-full absolute opacity-0 object-cover" />
-    <img src="https://picsum.photos/id/1020/1400/900" class="slide w-full h-full absolute opacity-0 object-cover" />
+    <img src="https://picsum.photos/id/1011/1400/1200" class="slide w-full h-full absolute opacity-0 object-cover" />
+    <img src="https://picsum.photos/id/1015/1400/1200" class="slide w-full h-full absolute opacity-0 object-cover" />
+    <img src="https://picsum.photos/id/1016/1400/1200" class="slide w-full h-full absolute opacity-0 object-cover" />
+    <img src="https://picsum.photos/id/1019/1400/1200" class="slide w-full h-full absolute opacity-0 object-cover" />
+    <img src="https://picsum.photos/id/1020/1400/1200" class="slide w-full h-full absolute opacity-0 object-cover" />
   </div>
 </div>
 
 </div>
+
+
+
+  </div>
+
+
     
   </div>
+
+
 
 
   </div>
@@ -732,8 +763,28 @@
 
 <!-- JavaScript to toggle sidebar -->
 <script>
-  
-  const toggleBtn = document.getElementById("toggleSidebar");
+  document.addEventListener("DOMContentLoaded", () => {
+    const slides = document.querySelectorAll(".slide");
+    let current = 0;
+    const total = slides.length;
+
+    // Initial slide visible
+    gsap.set(slides[current], { opacity: 1, zIndex: 1 });
+
+    setInterval(() => {
+      const next = (current + 1) % total;
+
+
+      gsap.to(slides[current], { opacity: 0, duration: 1, zIndex: 0 });
+      gsap.to(slides[next], { opacity: 1, duration: 1, zIndex: 1 });
+
+      current = next;
+    }, 3000); 
+
+
+    // social menu
+
+    const toggleBtn = document.getElementById("toggleSidebar");
   const socialSidebar = document.getElementById("socialSidebar");
   const topBar = toggleBtn.querySelector(".top-bar");
   const bottomBar = toggleBtn.querySelector(".bottom-bar");
@@ -796,6 +847,8 @@
   gsap.set(topBar, { y: -6 });
   gsap.set(bottomBar, { y: 6 });
 
+
+  });
 </script>
 
 
