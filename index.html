@@ -371,21 +371,39 @@
 
   <!-- social sidebar -->
 
-  <div class="fixed social-sidebar md:flex flex-col items-start gap-4 px-4 py-4 z-[999] top-[30%] left-5 bg-white backdrop-blur-lg w-auto bg-opacity-5 shadow-lg rounded-lg hidden ">
+  <!-- Toggle Button -->
+<div class="fixed bottom-5 left-5 z-[1000]">
+  <button id="toggleSidebar" class="toggle-btn bg-white bg-opacity-10 backdrop-blur-md rounded-lg p-4 flex flex-col items-center justify-center gap-0.5 shadow-lg w-8 h-8 relative">
+    <span class="bar top-bar absolute w-4 h-0.5 bg-white origin-center"></span>
+    <span class="bar bottom-bar absolute w-4 h-0.5 bg-white origin-center"></span>
+  </button>
+</div>
+
+<!-- Social Sidebar -->
+<div id="socialSidebar" class="fixed social-sidebar flex md:flex-col items-start gap-4 px-4 py-4 z-[999] bottom-20 left-5 bg-white backdrop-blur-lg w-auto bg-opacity-5 shadow-lg rounded-lg opacity-0 pointer-events-none md:flex">
   <!-- Social Links -->
-  <a href="https://www.facebook.com/"  target="_blank" rel="noopener noreferrer">
+  <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
     <i class="fa-brands fa-facebook-f text-white text-2xl hover:scale-110 transition"></i>
   </a>
-  <a href="https://www.instagram.com/"  target="_blank" rel="noopener noreferrer">
+  <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
     <i class="fa-brands fa-instagram text-white text-2xl hover:scale-110 transition"></i>
   </a>
-  <a href="https://twitter.com/"  target="_blank" rel="noopener noreferrer">
+  <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
     <i class="fa-brands fa-twitter text-white text-2xl hover:scale-110 transition"></i>
   </a>
-  <a href="https://www.linkedin.com/"  target="_blank" rel="noopener noreferrer">
+  <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
     <i class="fa-brands fa-linkedin-in text-white text-2xl hover:scale-110 transition"></i>
   </a>
+  <a href="mailto:contact@nbyit.com" target="_blank" rel="noopener noreferrer">
+    <i class="fa-solid fa-envelope text-white text-2xl hover:scale-110 transition"></i>
+  </a>
+  <a href="https://wa.me/8801715749788" target="_blank" rel="noopener noreferrer">
+    <i class="fa-brands fa-whatsapp text-white text-2xl hover:scale-110 transition"></i>
+  </a>
 </div>
+
+
+ 
 
   <!-- Header Section -->
   <section id="hero-section" class="flex flex-col items-start justify-end h-screen w-full py-32 gap-0 md:gap-10 relative px-10 md:px-40 lg:px-70">
@@ -1259,16 +1277,7 @@
       </div>
   </footer>
 
-<!-- <div class="relative w-full max-w-md clip-pentagon overflow-hidden pointer-events-none">
-  <div class="p-[2px] rounded-lg bg-gradient-to-br from-[#84F729]/35 to-[#15BFFD]/35">
-    <div class="flex flex-col items-start clip-pentagon p-4 backdrop-blur-sm rounded-lg font-medium text-white bg-[#1e1f2f]/80">
-      <div class="w-full max-h-[216px] mb-6">
-        <img src="https://rickandmortyapi.com/api/character/avatar/2.jpeg"  alt="Morty Smith" class="w-full h-auto max-h-[216px] object-cover rounded-md" />
-      </div>
-      <span class="text-xs md:text-base">Morty Smith</span>
-    </div>
-  </div>
-</div> -->
+
 
 
 
@@ -1314,6 +1323,74 @@
 
       current = next;
     }, 3000); 
+
+
+    // social menu
+
+    const toggleBtn = document.getElementById("toggleSidebar");
+  const socialSidebar = document.getElementById("socialSidebar");
+  const topBar = toggleBtn.querySelector(".top-bar");
+  const bottomBar = toggleBtn.querySelector(".bottom-bar");
+
+  let isOpen = false;
+
+  // Initially hide the sidebar
+  gsap.set(socialSidebar, { opacity: 0, y: 30, pointerEvents: "none" });
+
+  toggleBtn.addEventListener("click", () => {
+    isOpen = !isOpen;
+
+    if (isOpen) {
+      // Show sidebar
+      gsap.to(socialSidebar, {
+        opacity: 1,
+        y: 0,
+        duration: 0.4,
+        pointerEvents: "auto",
+        ease: "power2.out"
+      });
+
+      // Transform bars into a cross (X)
+      gsap.to(topBar, {
+        rotate: 45,
+        y: 0,
+        duration: 0.3
+      });
+      gsap.to(bottomBar, {
+        rotate: -45,
+        y: 0,
+        duration: 0.3
+      });
+
+    } else {
+      // Hide sidebar
+      gsap.to(socialSidebar, {
+        opacity: 0,
+        y: 30,
+        duration: 0.4,
+        pointerEvents: "none",
+        ease: "power2.in"
+      });
+
+      // Reset bars to original position
+      gsap.to(topBar, {
+        rotate: 0,
+        y: -6,
+        duration: 0.3
+      });
+      gsap.to(bottomBar, {
+        rotate: 0,
+        y: 6,
+        duration: 0.3
+      });
+    }
+  });
+
+  // Initial bar positions
+  gsap.set(topBar, { y: -6 });
+  gsap.set(bottomBar, { y: 6 });
+
+
   });
 </script>
 
