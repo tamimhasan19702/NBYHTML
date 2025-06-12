@@ -106,3 +106,5 @@ gsap.from(".heading, .paragraph", {
     toggleActions: "play none none reverse",
   },
 });
+
+// image view
